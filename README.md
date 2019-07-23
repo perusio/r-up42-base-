@@ -79,7 +79,7 @@ Type 'q()' to quit R.
 >
 ```
 
-It is up to you know to install the packages you need.
+It is up to you now to install the packages you need.
 
 ## TODO
 
