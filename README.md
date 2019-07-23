@@ -15,8 +15,8 @@ building [UP42](https://up42.com)
 
 ### Building the docker image
 
- 1. Clone the repository: `git clone https://github.com/perusio/up42-r-base`.
- 2. `cd up42-r-base`. 
+ 1. Clone the repository: `git clone https://github.com/perusio/up42-r-base`
+ 2. `cd up42-r-base`
  2. Build the image, for example:
  ```bash
  docker build -t up42-r:1.0 . 
