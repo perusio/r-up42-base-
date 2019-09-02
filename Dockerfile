@@ -20,3 +20,16 @@
 
 # Use the rocker/r-ver base images.
 FROM rocker/r-ver
+
+# Installing needed debian packages.
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update -y \
+    && apt-get install -y apt-transport-https \
+    && echo "deb https://cloud.r-project.org/bin/linux/debian stretch-cran35/" >> /etc/apt/sources.list \
+    && apt-get update -y \
+    && apt-get install -y --no-install-recommends libgdal-dev
+
+# Installing R packages.
+RUN R -e "install.packages('rgdal')" \
+    && R -e "install.packages('raster')" \
+    && R -e "install.packages('caret')"
