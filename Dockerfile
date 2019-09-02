@@ -33,3 +33,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 RUN R -e "install.packages('rgdal')" \
     && R -e "install.packages('raster')" \
     && R -e "install.packages('caret')"
+
+WORKDIR test-script
+COPY test.r .
+
+CMD ["R", "-f test.r"]
